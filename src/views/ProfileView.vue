@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
- <ProfilePage prof="Profile Page"/>
+ <ProfilePage prof="Profile Card"/>
   </div>
 </template>
 
