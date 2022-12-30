@@ -1,4 +1,5 @@
 # zid
+Simple pages to demonstrate routing on VueJS with Typescript. 
 
 ## Project setup
 ```
