@@ -16,7 +16,7 @@
         </router-link>
     </li>
     <!--router link 2-->
-    <li class="has-subnav">
+    <li>
         <router-link to="/profile">
           <i class="fa fa-user fa-2x"></i>
               <span class="nav-text">
@@ -25,7 +25,7 @@
         </router-link>
     </li>
     <!--router link 3-->
-    <li class="has-subnav">
+    <li>
         <router-link to="/credit">
           <i class="fa fa-credit-card fa-2x"></i>
             <span class="nav-text">
@@ -103,7 +103,7 @@ border-collapse:collapse;
 border-spacing:0;
 color:#999;
  font-family: arial;
-font-size: 14px;
+font-size: 16px;
 text-decoration:none;
 -webkit-transform:translateZ(0) scale(1,1);
 -webkit-transition:all .1s linear;
@@ -170,12 +170,6 @@ float: left;
 background: #e2e2e2;
 width: 100%;
 height: 100%;
-}
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
 </style>
 
