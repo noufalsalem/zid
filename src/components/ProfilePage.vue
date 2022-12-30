@@ -35,8 +35,8 @@
                     <p class="text-muted">info@example.com</p>
                   </div>
                   <div class="col-6 mb-3">
-                    <h5>Phone</h5>
-                    <p class="text-muted">055 555 5555</p>
+                    <h5>Gender</h5>
+                    <p class="text-muted">Female</p>
                   </div>
                 </div>
                 <h5>Projects</h5>
