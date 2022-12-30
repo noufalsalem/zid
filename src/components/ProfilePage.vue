@@ -76,7 +76,7 @@ export default class ProfilePage extends Vue {
 </script>
 
 <style scoped>
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
 h1 {
     margin: 40px 0 0;
