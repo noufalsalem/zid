@@ -41,15 +41,19 @@
     </div>
     <div class="col-xs-5 col-md-5 pull-right">
         <div class="form-group"> <label>CV CODE</label> 
+        <!--v-model cvCode from @Options is not recognized (test change)-->
         <input type="password" class="form-control" placeholder="CVC" 
+        v-model="cvCode" 
         min-length="3" maxlength="4" /> 
         </div>
     </div>
 </div>
         <div class="row">
             <div class="col-xs-12">
-                <div class="form-group"> <label>CARD OWNER</label> 
-                <input type="text" class="form-control" placeholder="Card Owner Name" 
+                <div class="form-group"> <label>CARD HOLDER</label> 
+                <!--v-model cardHolder from @Options is not recognized (test change)-->
+                <input type="text" class="form-control" placeholder="Card Owner Name"
+                v-model="cardHolder" 
                 min-length="4" maxlength="25"/> 
                 </div>
             </div>
@@ -58,7 +62,7 @@
 </div>
     <div class="panel-footer">
         <div class="row">
-            <div class="col-xs-12"> <button class="btn btn-success btn-lg btn-block" type="submit">
+            <div class="col-xs-12"> <button class="btn btn-success btn-lg btn-block" @click="submitForm">
             Confirm Payment</button> 
             </div>
         </div> 
@@ -79,18 +83,41 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import { defineComponent } from 'vue'
+//below is importing for vuelidate
+import useValidate from '@vuelidate/core'
+import { required } from '@vuelidate/validators'
 
 @Options({
   props: {
-    crdMsg: String
+    crdMsg: String,
+    //everything in data method is new addition to test
+    data() {
+        return {
+            v$: useValidate(),
+            cardHolder: String,
+            cvCode: 0
+        }
+    }
   }
 })
 
 
 export default class CreditPage extends Vue {
-  crdMsg!: string
-}
+  crdMsg!: string;
+    
+    //everything until the end of submitForm is a new addition to test
+    validations() {
+        return {
+            cardHolder: { required },
+            cvCode: { required }
+        }
+    }
+    submitForm() {
+        // this.v$.$validate(); // V$ DOES NOT EXIST ON TYPE CREDITPAGE ERROR. NEED PROPTYPE?
+        alert('Form Success');
+    }
+  }
+
 </script>
 
 <style scoped>
